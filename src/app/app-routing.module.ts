@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { IndexComponent } from './public/documents/index/index.component'
+import { IndexComponent } from './private/documents/index/index.component'
 
 
 const routes: Routes = [
