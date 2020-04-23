@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Database } from '../../../_models/database';
 //service to retrieve data
 import { DataService } from '../../../_providers/data.service';
+//navbar
+import { NavbarComponent } from '../../navbar/navbar.component';
 
 @Component({
   selector: 'app-index',

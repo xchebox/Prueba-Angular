@@ -1,0 +1,48 @@
+.container {
+  margin-top: 56px;
+}
+.text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: .9em;
+  white-space: nowrap;
+}
+.text.primary {
+  color: #23316c;
+}
+.text.secondary {
+  color: #b0b7c9;
+}
+.sidenav {
+  background-color: #f3f5f7;
+  width: 20%;
+}
+.content-container {
+  padding: 10px;
+  background-color: #fafafa;
+  height: 100vh;
+}
+.table-container {
+  background-color: #fff;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.table-container .odd-row{
+  background-color: #000;
+}
+.search-field {
+  height: 95%;
+  border-width: 1px;
+  margin: 0px;
+  border-color: #000;
+  padding-left: 5px;
+}
+.table-options .search-icon{
+  border-width: 1px;
+  height: 100%;
+  width: 30px;
+}
+.table-content {
+  height: 60vh;
+  overflow-y: scroll;
+}
