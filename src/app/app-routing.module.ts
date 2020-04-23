@@ -1,8 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { IndexComponent } from './public/documents/index/index.component'
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: IndexComponent,
+    data: {
+      title: 'Documentos',
+      description: 'Documentos',
+    }
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
