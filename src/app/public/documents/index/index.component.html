@@ -1,1 +1,5 @@
-<p>index works!</p>
+<div>
+  <ul *ngIf="data">
+    <li *ngFor="let document of data.documents"></li>
+  </ul>
+</div>

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+//model
+import { Database } from '../../../_models/database';
+//service to retrieve data
+import { DataService } from '../../../_providers/data.service';
 
 @Component({
   selector: 'app-index',
@@ -6,10 +10,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+  public data: Database;
 
-  constructor() { }
+  constructor(
+    private dataService: DataService
+  ) { }
 
   ngOnInit() {
+    this.bindData();
+  }
+
+
+  /**
+   * bind local database
+   */
+  bindData(){
+    this.dataService.loadLocalJson()
+      .then((data: Database) => {
+        this.data = data;
+      })
+      .catch((error: Error) => {
+        console.log(`Error ${error.message}`);
+      })
   }
 
 }
