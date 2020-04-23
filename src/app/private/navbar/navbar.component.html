@@ -1,0 +1,23 @@
+<nav>
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Help</button>
+  </mat-menu>
+
+  <mat-grid-list cols="9" rowHeight="50px">
+    <mat-grid-tile [colspan]=1>
+      <button class="menu" mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=4></mat-grid-tile>
+    <mat-grid-tile [colspan]=4>
+      <p class="text">ES</p>
+      <div class="text round inverted" *ngIf="initials"><p class="initials">{{initials}}</p></div>
+      <p *ngIf="user" class="text">{{user.name}}</p>
+      <mat-icon class="text">keyboard_arrow_down</mat-icon>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+</nav>

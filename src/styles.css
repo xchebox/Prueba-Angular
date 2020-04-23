@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.table-container .mat-grid-tile .mat-figure {
+   justify-content: flex-start !important ;
+   align-items: flex-start !important;
+}
+
+.table-container .table-content .mat-grid-list {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-width: 1px;
+  border-color: #e8eaef;
+  border-style: solid;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+
+$primary-color-if: #1d2c68;
+
+$row-text-color: #1b3266;
+
+$text-color-1: #8d98b2;
+
+$text-color-2: #9db8f2;
+
+$background-color: #f3f5f7;
+
+$black-color: #000000;
+
+$white-color: #ffffff;
+
+$title-color: #4D4D4D;
+
+
+$status-1: #79CC21;
+
+$status-2: #FCE067;
+
+$status-3: #42D3FF;
+
+$status-4: #A0E9FF;
