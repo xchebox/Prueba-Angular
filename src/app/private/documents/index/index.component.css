@@ -20,8 +20,11 @@
 .sidenav-element{
   height: 9vh;
 }
+.sidenav-element span{
+  margin-right: 10%;
+}
 .sidenav-element .text {
-  padding: 0px 40% 0px 10%;
+  padding: 0px 30% 0px 10%;
   display: inline-flex;
   align-items: center;
 }
@@ -81,7 +84,7 @@ h3.index-title {
   border-width: 1px;
 }
 .table-options button.inverted {
-  font-size: .7em;
+  font-size: .6em;
   width: 70%;
   color: #FFF;
   background-color: #1d2c68;
