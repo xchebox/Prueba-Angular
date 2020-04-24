@@ -75,3 +75,15 @@ h3 .index-title {
   height: 70vh;
   overflow-y: scroll;
 }
+.table-content .text.new {
+    background-color: #79CC21;
+}
+.table-content .text.in-process {
+    background-color: #FCE067;
+}
+.table-content .text.signed {
+    background-color: #42D3FF;
+}
+.table-content .text.finished {
+    background-color: #A0E9FF;
+}

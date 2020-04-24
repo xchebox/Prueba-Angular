@@ -51,7 +51,10 @@
             <!-- Table Content -->
             <div class="table-content">
               <mat-grid-list [style.background]="(i%2)==1?'#f3f5f7':'#FFF'" [gutterSize]="'15px'" cols="6" rowHeight="50px" *ngFor="let document of data.documents; let i = index">
-                <mat-grid-tile [rowspan]=1 [colspan]=1><p class="text primary">{{document.status.name}}</p></mat-grid-tile>
+                <mat-grid-tile [rowspan]=1 [colspan]=1>
+                  <p class="text primary" [ngClass]="{'new': document.status.id==1, 'in-process': document.status.id==2, 'signed': document.status.id==3, 'finished': document.status.id==4}">{{document.status.name}}
+                  </p>
+                </mat-grid-tile>
                 <mat-grid-tile [rowspan]=1 [colspan]=1><p class="text primary">{{document.name}}</p></mat-grid-tile>
                 <mat-grid-tile [rowspan]=1 [colspan]=1><p class="text primary">{{document.user.name}}</p></mat-grid-tile>
                 <mat-grid-tile [rowspan]=1 [colspan]=1><p *ngIf="document.sign_requests[0]" class="text primary">{{document.sign_requests[0].name}}</p></mat-grid-tile>
