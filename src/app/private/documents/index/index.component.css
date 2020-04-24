@@ -14,15 +14,16 @@
   background-color: #e8eaef;
 }
 .sidenav-content {
-  margin-top: 4vh;
+  margin-top: 6vh;
   width: 100%;
 }
 .sidenav-element{
   height: 9vh;
 }
 .sidenav-element .text {
-  text-align: center;
-  padding-top: 2vh;
+  padding: 0px 40% 0px 10%;
+  display: inline-flex;
+  align-items: center;
 }
 .sidenav-content .active{
   background-color: #f3f5f7;
@@ -57,7 +58,7 @@ h3.index-title {
   background-color: #000;
 }
 .search-field {
-  height: 80%;
+  height: 85%;
   width: 90%;
   border-style: solid;
   border-width: 1px;
@@ -74,7 +75,7 @@ h3.index-title {
 }
 .table-options .search-icon{
   width: 10%;
-  height: 80%;
+  height: 88%;
   border-style: solid;
   border-color: #e8eaef;
   border-width: 1px;
@@ -95,16 +96,24 @@ h3.index-title {
   overflow-y: scroll;
 }
 .table-content .text.new {
-    background-color: #79CC21;
+  margin-left: 4%;
+  padding: 2% 5% 2% 5%;
+  background-color: #79CC21;
 }
 .table-content .text.in-process {
-    background-color: #FCE067;
+  margin-left: 4%;
+  padding: 2% 5% 2% 5%;
+  background-color: #FCE067;
 }
 .table-content .text.signed {
-    background-color: #42D3FF;
+  margin-left: 4%;
+  padding: 2% 5% 2% 5%;
+  background-color: #42D3FF;
 }
 .table-content .text.finished {
-    background-color: #A0E9FF;
+  margin-left: 4%;
+  padding: 2% 5% 2% 5%;
+  background-color: #A0E9FF;
 }
 .loading {
   position: absolute;

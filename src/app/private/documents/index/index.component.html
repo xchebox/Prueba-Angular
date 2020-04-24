@@ -5,7 +5,7 @@
       <div class="sidenav-content">
         <div class="sidenav-element inactive">
           <p class="primary text">
-            <span><mat-icon>home</mat-icon></span>
+            <mat-icon>home</mat-icon>
             Inicio
           </p>
         </div>
@@ -70,7 +70,7 @@
                 <mat-grid-tile [rowspan]=1 [colspan]=1><p class="text primary">{{document.name}}</p></mat-grid-tile>
                 <mat-grid-tile [rowspan]=1 [colspan]=1><p class="text primary">{{document.user.name}}</p></mat-grid-tile>
                 <mat-grid-tile [rowspan]=1 [colspan]=1><p *ngIf="document.sign_requests[0]" class="text primary">{{document.sign_requests[0].name}}</p></mat-grid-tile>
-                <mat-grid-tile [rowspan]=1 [colspan]=1><p class="text primary">{{document.created_at}}</p></mat-grid-tile>
+                <mat-grid-tile [rowspan]=1 [colspan]=1><p class="text primary">{{document.created_at | date:"MM/dd/yy"}}</p></mat-grid-tile>
                 <mat-grid-tile [rowspan]=1 [colspan]=1><p class="text primary"><mat-icon>remove_red_eye</mat-icon></p></mat-grid-tile>
               </mat-grid-list>
             </div>
