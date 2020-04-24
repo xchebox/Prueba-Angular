@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="container">
-  <mat-grid-list cols=15 rowHeight="90vh">
+  <mat-grid-list cols=15 rowHeight="92vh">
     <mat-grid-tile class="sidenav" [colspan]=2>
       <div class="sidenav-content">
         <div class="sidenav-element inactive">
@@ -17,27 +17,39 @@
         </div>
       </div>
     </mat-grid-tile>
-    <mat-grid-tile class="content-container" [colspan]=13>
+    <mat-grid-tile [colspan]=13>
       <div class="content-container">
         <h3 class="index-title text primary">Documentos</h3>
 
+        <mat-grid-list cols=40 rowHeight="5vh">
+          <mat-grid-tile class="tab active" [colspan]=3><p class="text primary">Todos</p></mat-grid-tile>
+          <mat-grid-tile class="tab inactive" [colspan]=3><p class="text secondary">Nuevos</p></mat-grid-tile>
+          <mat-grid-tile class="tab inactive" [colspan]=3><p class="text secondary">En Proceso</p></mat-grid-tile>
+          <mat-grid-tile class="tab inactive" [colspan]=3><p class="text secondary">Firmado</p></mat-grid-tile>
+          <mat-grid-tile class="tab inactive" [colspan]=3><p class="text secondary">Por Firmar</p></mat-grid-tile>
+          <mat-grid-tile class="tab inactive" [colspan]=25></mat-grid-tile>
+        </mat-grid-list>
+
+
 
         <div class="table-container">
-          <mat-grid-list cols="6" rowHeight="5vh" [gutterSize]="'10px'" class="table-options">
-            <mat-grid-tile [colspan]=2>
-              <input class="search-field" type="text" placeholder="Buscar"/>
-              <span class="search-icon"><mat-icon>search</mat-icon></span>
-            </mat-grid-tile>
-            <mat-grid-tile [colspan]=1>
-              <span><mat-icon>filter_list</mat-icon></span>
-            </mat-grid-tile>
-            <mat-grid-tile [colspan]=2></mat-grid-tile>
-            <mat-grid-tile [colspan]=1>
-              <button mat-flat-button class="inverted">Subir Documento</button>
-            </mat-grid-tile>
-          </mat-grid-list>
+          <div class="table-options">
+            <mat-grid-list cols="6" rowHeight="5vh" [gutterSize]="'10px'">
+              <mat-grid-tile [colspan]=2>
+                <input class="search-field" type="text" placeholder="Buscar"/>
+                <span class="search-icon"><mat-icon>search</mat-icon></span>
+              </mat-grid-tile>
+              <mat-grid-tile [colspan]=1>
+                <span><mat-icon>filter_list</mat-icon></span>
+              </mat-grid-tile>
+              <mat-grid-tile [colspan]=2></mat-grid-tile>
+              <mat-grid-tile [colspan]=1>
+                <button mat-flat-button class="inverted">Subir Documento</button>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </div>
 
-          <div *ngIf="data" >
+          <div class="table-index" *ngIf="data" >
             <!--Table Header-->
             <mat-grid-list cols="6" rowHeight="50px">
               <mat-grid-tile [rowspan]=1 [colspan]=1><p class="text secondary">Estado</p></mat-grid-tile>
@@ -69,15 +81,7 @@
     </mat-grid-tile>
 
   </mat-grid-list>
-      <!--<div class="">
-        <p>Documentos</p>
-        <mat-tab-group animationDuration="0ms" mat-align-tabs="start">
-          <mat-tab label="Todos"></mat-tab>
-          <mat-tab label="Nuevos"></mat-tab>
-          <mat-tab label="En Proceso"></mat-tab>
-          <mat-tab label="Firmado"></mat-tab>
-          <mat-tab label="Por Firmar"></mat-tab>
-        </mat-tab-group>
-
-      </div>-->
+</div>
+<div class="loading" *ngIf="loading">
+  <mat-spinner></mat-spinner>
 </div>
