@@ -1,0 +1,89 @@
+.container {
+
+}
+.text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: .9em;
+  white-space: nowrap;
+}
+.text.primary {
+  color: #23316c;
+}
+.text.secondary {
+  color: #b0b7c9;
+}
+.sidenav {
+  background-color: #e8eaef;
+}
+.sidenav-content {
+  margin-top: 4vh;
+  width: 100%;
+}
+.sidenav-element{
+  height: 9vh;
+}
+.sidenav-element .text {
+  text-align: center;
+  padding-top: 2vh;
+}
+.sidenav-content .active{
+  background-color: #f3f5f7;
+}
+.sidenav-content .inactive{
+  color: #8d98b2;
+}
+.content-container {
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 10px;
+  background-color: #fafafa;
+  width: 100%;
+}
+h3 .index-title {
+  font-weight: normal;
+}
+.table-container {
+  background-color: #fff;
+}
+.table-container .odd-row{
+  background-color: #000;
+}
+.search-field {
+  height: 80%;
+  width: 90%;
+  border-style: solid;
+  border-width: 1px;
+  margin: 0px;
+  border-color: #e8eaef;
+  padding-left: 5px;
+}
+.table-options .search-icon{
+  width: 10%;
+  height: 80%;
+  border-style: solid;
+  border-color: #e8eaef;
+  border-width: 1px;
+}
+.table-options button.inverted {
+  font-size: .7em;
+  width: 70%;
+  color: #FFF;
+  background-color: #1d2c68;
+}
+.table-content {
+  height: 70vh;
+  overflow-y: scroll;
+}
+.table-content .text.new {
+    background-color: #79CC21;
+}
+.table-content .text.in-process {
+    background-color: #FCE067;
+}
+.table-content .text.signed {
+    background-color: #42D3FF;
+}
+.table-content .text.finished {
+    background-color: #A0E9FF;
+}
