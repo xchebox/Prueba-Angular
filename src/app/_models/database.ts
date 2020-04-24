@@ -1,8 +1,7 @@
 import { Document } from './document'
 
 export class Database {
-  private documents: Array<Document>;
-
+  public documents: Array<Document>;
 
   constructor(documents: Array<Document>){
     this.documents = documents;

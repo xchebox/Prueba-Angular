@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 //model
 import { Database } from '../../../_models/database';
 //service to retrieve data
@@ -13,6 +13,7 @@ import { NavbarComponent } from '../../navbar/navbar.component';
 })
 export class IndexComponent implements OnInit {
   public data: Database;
+  public loading = false;
 
   constructor(
     private dataService: DataService
@@ -27,6 +28,10 @@ export class IndexComponent implements OnInit {
    * bind local database
    */
   bindData(){
+    if (this.loading){
+      return;
+    }
+    this.loading = true;
     this.dataService.loadLocalJson()
       .then((data: Database) => {
         this.data = data;
@@ -34,6 +39,40 @@ export class IndexComponent implements OnInit {
       .catch((error: Error) => {
         console.log(`Error ${error.message}`);
       })
+      .finally(()=> {
+        this.loading = false;
+      });
+  }
+
+  /**
+   * request new data
+   *
+   */
+  requestNewData(){
+    if (this.loading){
+      return;
+    }
+    this.loading = true;
+    this.dataService.loadLocalJson()
+      .then((data: Database) => {
+        this.data.documents = this.data.documents.concat(data.documents);
+      })
+      .catch((error: Error) => {
+        console.log(`Error ${error.message}`);
+      })
+      .finally(()=> {
+        this.loading = false;
+      });
+  }
+
+  /**
+   * scroll event
+   */
+  onScroll(event: Event){
+    let target = event.target as any;
+    if (target.scrollHeight <= target.scrollTop + target.offsetHeight){
+      this.requestNewData();
+    }
   }
 
 }
