@@ -14,8 +14,13 @@
   border-style: solid;
 }
 
+.sidenav.mat-grid-tile .mat-figure {
+  align-items: flex-start;
+}
+
 body {
   overflow-y: hidden;
+  margin: 0px;
 }
 
 
