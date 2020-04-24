@@ -31,7 +31,7 @@
 .sidenav-content .active{
   background-color: #f3f5f7;
 }
-.sidenav-content .inactive{
+.sidenav-content .inactive .primary.text{
   color: #8d98b2;
 }
 .tab {
